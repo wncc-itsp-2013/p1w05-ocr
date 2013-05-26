@@ -11,6 +11,6 @@ Ritesh Kakade (rmkh4301@gmail.com)
 
 About the project
 -----------------------------
-[Wikipedia article]{http://en.wikipedia.org/wiki/Optical_character_recognition}
+[Wikipedia article](http://en.wikipedia.org/wiki/Optical_character_recognition)
 
-[OCR-How it works]{http://www.nicomsoft.com/optical-character-recognition-ocr-how-it-works/}
+[OCR-How it works](http://www.nicomsoft.com/optical-character-recognition-ocr-how-it-works/)
