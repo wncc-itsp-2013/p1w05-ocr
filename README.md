@@ -1,5 +1,7 @@
-Optical Character Recognition
-=============================
+Optical Character Recognition(Matlab)
+=====================================
+
+
 
 Team Members
 -----------------------------
