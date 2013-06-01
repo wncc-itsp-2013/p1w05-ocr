@@ -51,3 +51,43 @@ function [stats,maxx,maxy,bw3,L] = boundbox()
         end
     end
 end
+
+%%%%%%%%%%%%%%%%%%%%%%%%% FUNCTION DOCUMENTATION %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Boundbox function returns the variables 'stats','maxx','maxy','bw3','L'
+%from the image 'ocrfonts.png'.
+
+%imread, mat2gray, strel, imerode imdilate have been explained in
+%'removelines.m'
+
+%bwdist function computes the Euclidean distance transform of a binarized
+%image which it takes as input. For each pixel in input image, the distance
+%transform assigns a number that is the distance between that pixel and the
+%nearest nonzero pixel(nearest white element in this case). In this file,
+%it is used to connect the disconnected elements such as i,j etc by
+%approximating a distance 5 and returns the image bw4.
+
+%bwconncomp function takes in a binarized image as input and returns the
+%connected components found in the input image.
+
+%labelmatrix function takes in the Connected Component output of the
+%bwconncomp function and returns a labeled matrix wherein each of the
+%connected component is assigned a label number. The elements of the
+%labelmatrix are integer values starting from 0 for the background pixels
+%and 1,2,3,.. and so on for each pixel in a connected component. i.e, all
+%the pixel in a connected component are assigned the same integer value.
+
+%regionprops function calculated the specified properties of all the
+%connected components in an image. In this file, the syntax used is
+%regionprops(L,properties) and we get a structure called stats as the
+%output. Some examples of properties for the connected components are
+%'Area','BoundingBox',Perimeter' etc. The Boundbox property has been
+%explained in the code.
+
+%Summarizing the outputs of boundbox function
+%stats is the structure containing the properties of the connected
+%components of the binarized image.
+%maxx and maxy are the maximum width and height respectively among all the
+%BoundingBox dimensions.
+%bw3 is the binarized image obtained after removing the lines and specks.
+%L is the label matrix corresponding to the image bw3.
